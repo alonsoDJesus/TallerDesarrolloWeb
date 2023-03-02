@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo helloworld.players -->	
+		<record model="ir.ui.view" id="players_form">
+            <field name="name">helloworld.players.form</field>
+            <field name="model">helloworld.players</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de players">
+                        <field name="photo" placeholder="Foto" widget="image" options = "{'size':[150, 50]}"/>					
+                        <field name="name" placeholder="Nombre del equipo" />
+                        <field name="numero" placeholder="Numero"/>
+						<field name="posicion" placeholder="Posicion"/>
+						<field name="team_id" placeholder="Equipo"/>
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo helloworld.players -->	
+		<record model="ir.ui.view" id="helloworld_players_tree">
+			<field name="name">helloworld.players.tree</field>
+			<field name="model">helloworld.players</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="players" >
+						<field name="photo" widget="image" options = "{'size':[150, 50]}"/>
+                        <field name="name"/>
+						<field name="numero"/>
+						<field name="posicion"/>
+                        <field name="team_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="helloworld_players_search">
+			<field name="name">helloworld.alumno.search</field>
+			<field name="model">helloworld.players</field>
+			<field name="arch" type="xml">
+				<search>
+                        <field name="name" />
+                        <field name="team_id"/>
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO helloworld.players -->	
+		<record id="helloworld_players_action" model="ir.actions.act_window">
+			<field name="name">players</field>
+			<field name="res_model">helloworld.players</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>

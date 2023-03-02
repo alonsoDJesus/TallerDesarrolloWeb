@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo helloworld.referees -->	
+		<record model="ir.ui.view" id="referees_form">
+            <field name="name">helloworld.referees.form</field>
+            <field name="model">helloworld.referees</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de referees">
+                        <field name="photo" placeholder="Foto" widget="image" options = "{'size':[150, 50]}"/>					
+                        <field name="name" placeholder="Nombre del equipo" />
+						<field name="posicion" placeholder="Posicion"/>
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo helloworld.referees -->	
+		<record model="ir.ui.view" id="helloworld_referees_tree">
+			<field name="name">helloworld.referees.tree</field>
+			<field name="model">helloworld.referees</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="referees" >
+						<field name="photo" widget="image" options = "{'size':[150, 50]}"/>
+                        <field name="name"/>
+						<field name="posicion"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="helloworld_referees_search">
+			<field name="name">helloworld.alumno.search</field>
+			<field name="model">helloworld.referees</field>
+			<field name="arch" type="xml">
+				<search>
+                        <field name="name" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO helloworld.referees -->	
+		<record id="helloworld_referees_action" model="ir.actions.act_window">
+			<field name="name">referees</field>
+			<field name="res_model">helloworld.referees</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>

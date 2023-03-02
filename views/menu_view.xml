@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="Teams management" id="helloworld_menu" sequence="20" />
+			<menuitem name="Configuración" id="helloworld_configuracion_menu" sequence="10" parent="helloworld_menu" />
+				<menuitem name="Team" action="helloworld_teams_action"  id="helloworld_teams_menu" sequence="20" parent="helloworld_configuracion_menu" />
+				<menuitem name="Players" action="helloworld_players_action"  id="helloworld_players_menu" sequence="21" parent="helloworld_configuracion_menu" />
+				<menuitem name="Referees" action="helloworld_referees_action"  id="helloworld_referees_menu" sequence="22" parent="helloworld_configuracion_menu" />
+				<menuitem name="Places" action="helloworld_places_action"  id="helloworld_places_menu" sequence="23" parent="helloworld_configuracion_menu" />
+	</data>
+</odoo>

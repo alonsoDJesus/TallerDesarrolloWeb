@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo helloworld.places -->	
+		<record model="ir.ui.view" id="places_form">
+            <field name="name">helloworld.places.form</field>
+            <field name="model">helloworld.places</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Datos de places">
+                        <field name="photo" placeholder="Foto" widget="image" options = "{'size':[150, 50]}"/>					
+                        <field name="name" placeholder="Nombre del equipo" />
+						<field name="city" placeholder="Ciudad"/>
+						<field name="state" placeholder="Estado"/>
+						<field name="capacity" placeholder="Capacidad"/>
+                    </group>
+                </sheet>
+            </form>
+            </field>
+		</record>
+
+        <!-- vista tipo tree del modelo helloworld.places -->	
+		<record model="ir.ui.view" id="helloworld_places_tree">
+			<field name="name">helloworld.places.tree</field>
+			<field name="model">helloworld.places</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="places" >
+						<field name="photo" widget="image" options = "{'size':[150, 50]}"/>
+                        <field name="name"/>
+						<field name="city"/>
+						<field name="state"/>
+						<field name="capacity"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="helloworld_places_search">
+			<field name="name">helloworld.alumno.search</field>
+			<field name="model">helloworld.places</field>
+			<field name="arch" type="xml">
+				<search>
+                        <field name="name" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO helloworld.places -->	
+		<record id="helloworld_places_action" model="ir.actions.act_window">
+			<field name="name">places</field>
+			<field name="res_model">helloworld.places</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+</odoo>
