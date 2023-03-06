@@ -9,5 +9,6 @@ class referees(models.Model):
     photo = fields.Binary(string='Foto')
     #numero = fields.Integer(string='Numero de playera')
     posicion = fields.Selection( [('ban', 'Bandera'), ('cen', 'Central')], string = 'Tipo de arbitro' )
+    league_id = fields.Many2one('helloworld.leagues', string='League')
 
     _order = 'name'

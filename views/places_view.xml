@@ -11,9 +11,8 @@
                     <group string="Datos de places">
                         <field name="photo" placeholder="Foto" widget="image" options = "{'size':[150, 50]}"/>					
                         <field name="name" placeholder="Nombre del equipo" />
-						<field name="city" placeholder="Ciudad"/>
-						<field name="state" placeholder="Estado"/>
 						<field name="capacity" placeholder="Capacidad"/>
+						<field name="league_id" placeholder="Liga"/>
                     </group>
                 </sheet>
             </form>
@@ -29,9 +28,8 @@
 				<tree string="places" >
 						<field name="photo" widget="image" options = "{'size':[150, 50]}"/>
                         <field name="name"/>
-						<field name="city"/>
-						<field name="state"/>
 						<field name="capacity"/>
+						<field name="league"/>
 				</tree>
 			</field>
 		</record>

@@ -17,5 +17,6 @@ class teams(models.Model):
     coach_id = fields.Many2one('helloworld.coachs',string='Coach')
     photo = fields.Binary(string='Foto')
     player_ids = fields.One2many('helloworld.players', 'team_id' ,string='Team')
+    league_id = fields.Many2one('helloworld.leagues', string='League')
 
     _order = 'name'

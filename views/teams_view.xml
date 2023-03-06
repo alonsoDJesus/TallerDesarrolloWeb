@@ -12,7 +12,8 @@
                         <field name="name" placeholder="Nombre del equipo" />
                         <field name="coach_id" placeholder="Coach"/>
                         <field name="photo" placeholder="Foto" widget="image" options = "{'size': [150, 50]}"/>
-                    </group>
+						<field name="league_id" placeholder = "Liga"/>
+					</group>
 					<field name = "player_ids" nolabel = "1">
 						<tree editable = "true">
 							<field name = "photo" widget = "image" options = "{'size': [150, 50]}"/>
@@ -36,6 +37,7 @@
                         <field name="name" />
                         <field name="coach_id"/>
                         <field name="photo" widget="image" options = "{'size': [150, 50]}"/>
+						<field name="league_id"/>
 				</tree>
 			</field>
 		</record>

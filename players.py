@@ -8,6 +8,6 @@ class players(models.Model):
     name = fields.Char(string='Nombre')
     photo = fields.Binary(string='Foto')
     numero = fields.Integer(string='Numero de playera')
-    posicion = fields.Selection( [('del', 'Delantero'), ('def','Defensa'), ('port','Portero'), ('car','Carrilero'), ('cen', 'Central')], string = 'Número de la playera' )
+    posicion = fields.Selection( [('del', 'Delantero'), ('def','Defensa'), ('port','Portero'), ('car','Carrilero'), ('cen', 'Central')], string = 'Posicion' )
 
     _order = 'team_id, name'

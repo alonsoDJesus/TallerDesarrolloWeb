@@ -12,6 +12,8 @@
         'views/teams_view.xml',
         'views/players_view.xml',
         'views/referees_view.xml',
+        'views/places_view.xml',
+        'views/leagues_view.xml',
         'views/menu_view.xml',    
     ],
     'installable': True,
